@@ -1,10 +1,14 @@
 import ResourceList from './ResourceList';
 
+const activitiesEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/activities/`
+  : 'http://localhost:8000/api/activities/';
+
 function Activities() {
   return (
     <ResourceList
       collection="activities"
-      endpoint="/api/activities/"
+      endpoint={activitiesEndpoint}
       title="Activities"
       subtitle="Recent logged workouts from OctoFit members."
       renderItem={(activity) => (

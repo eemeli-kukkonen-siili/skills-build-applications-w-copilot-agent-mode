@@ -1,10 +1,14 @@
 import ResourceList from './ResourceList';
 
+const leaderboardEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`
+  : 'http://localhost:8000/api/leaderboard/';
+
 function Leaderboard() {
   return (
     <ResourceList
       collection="leaderboard"
-      endpoint="/api/leaderboard/"
+      endpoint={leaderboardEndpoint}
       title="Leaderboard"
       subtitle="Ranked competitors and their current challenge points."
       renderItem={(entry) => (

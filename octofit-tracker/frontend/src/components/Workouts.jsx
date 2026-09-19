@@ -1,10 +1,14 @@
 import ResourceList from './ResourceList';
 
+const workoutsEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+  : 'http://localhost:8000/api/workouts/';
+
 function Workouts() {
   return (
     <ResourceList
       collection="workouts"
-      endpoint="/api/workouts/"
+      endpoint={workoutsEndpoint}
       title="Workouts"
       subtitle="Suggested sessions matched to common training goals."
       renderItem={(workout) => (

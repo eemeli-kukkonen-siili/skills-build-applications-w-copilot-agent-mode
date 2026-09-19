@@ -1,10 +1,14 @@
 import ResourceList from './ResourceList';
 
+const usersEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/`
+  : 'http://localhost:8000/api/users/';
+
 function Users() {
   return (
     <ResourceList
       collection="users"
-      endpoint="/api/users/"
+      endpoint={usersEndpoint}
       title="Users"
       subtitle="Profiles for athletes, coaches, and team leads using OctoFit."
       renderItem={(user) => (
