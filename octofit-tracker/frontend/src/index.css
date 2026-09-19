@@ -1,0 +1,20 @@
+:root {
+  font-family: Avenir Next, Avenir, Verdana, sans-serif;
+  color: #1f322d;
+  background: #f5f0e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

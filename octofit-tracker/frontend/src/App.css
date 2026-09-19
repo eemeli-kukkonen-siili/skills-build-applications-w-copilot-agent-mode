@@ -1,0 +1,160 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #10231f;
+  color: #f5fbf8;
+  padding: 28px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.brand-lockup img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.brand-lockup h1,
+.content-heading h1 {
+  margin: 0;
+}
+
+.eyebrow {
+  color: #77c89d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.sidebar .nav-link {
+  border-radius: 8px;
+  color: #d9eee6;
+  font-weight: 700;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  background: #d6f35f;
+  color: #10231f;
+}
+
+.api-note {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #bad3ca;
+  font-size: 0.84rem;
+  margin-top: 30px;
+  overflow-wrap: anywhere;
+  padding-top: 20px;
+}
+
+.main-content {
+  background: #f5f0e8;
+  padding: 36px;
+}
+
+.content-panel {
+  max-width: 1120px;
+}
+
+.content-heading {
+  margin-bottom: 24px;
+}
+
+.content-heading h1 {
+  color: #1c2d28;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.content-heading p:last-child {
+  color: #5c6f68;
+  margin-top: 8px;
+}
+
+.resource-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.resource-card {
+  background: #fffdf8;
+  border: 1px solid #ded6c8;
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgba(18, 35, 31, 0.08);
+  padding: 22px;
+}
+
+.resource-card h2 {
+  color: #1d312c;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.resource-card p {
+  color: #62736d;
+  margin-bottom: 18px;
+}
+
+.resource-card dl {
+  display: grid;
+  gap: 8px 12px;
+  grid-template-columns: max-content 1fr;
+  margin: 0;
+}
+
+.resource-card dt {
+  color: #66766f;
+  font-weight: 700;
+}
+
+.resource-card dd {
+  color: #1f322d;
+  margin: 0;
+}
+
+.leaderboard-card {
+  position: relative;
+}
+
+.rank {
+  background: #d6f35f;
+  border-radius: 999px;
+  color: #10231f;
+  display: inline-flex;
+  font-weight: 900;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+}
+
+.status-text {
+  color: #5c6f68;
+}
+
+@media (max-width: 800px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .main-content {
+    padding: 22px;
+  }
+
+  .sidebar .nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+}
