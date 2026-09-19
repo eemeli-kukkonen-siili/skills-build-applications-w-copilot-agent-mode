@@ -4,6 +4,7 @@ function Teams() {
   return (
     <ResourceList
       collection="teams"
+      endpoint="/api/teams/"
       title="Teams"
       subtitle="Training groups competing across the OctoFit leaderboard."
       renderItem={(team) => (

@@ -4,6 +4,7 @@ function Leaderboard() {
   return (
     <ResourceList
       collection="leaderboard"
+      endpoint="/api/leaderboard/"
       title="Leaderboard"
       subtitle="Ranked competitors and their current challenge points."
       renderItem={(entry) => (

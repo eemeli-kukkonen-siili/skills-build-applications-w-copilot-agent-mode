@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchCollection } from '../api';
 
-function ResourceList({ collection, title, subtitle, renderItem }) {
+function ResourceList({ collection, endpoint, title, subtitle, renderItem }) {
   const [items, setItems] = useState([]);
   const [status, setStatus] = useState('loading');
   const [error, setError] = useState('');
@@ -9,7 +9,7 @@ function ResourceList({ collection, title, subtitle, renderItem }) {
   useEffect(() => {
     let active = true;
 
-    fetchCollection(collection)
+    fetchCollection(collection, endpoint)
       .then((records) => {
         if (active) {
           setItems(records);
@@ -26,7 +26,7 @@ function ResourceList({ collection, title, subtitle, renderItem }) {
     return () => {
       active = false;
     };
-  }, [collection]);
+  }, [collection, endpoint]);
 
   return (
     <section className="content-panel">

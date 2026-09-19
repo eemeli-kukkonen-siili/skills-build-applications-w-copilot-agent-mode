@@ -4,6 +4,7 @@ function Users() {
   return (
     <ResourceList
       collection="users"
+      endpoint="/api/users/"
       title="Users"
       subtitle="Profiles for athletes, coaches, and team leads using OctoFit."
       renderItem={(user) => (

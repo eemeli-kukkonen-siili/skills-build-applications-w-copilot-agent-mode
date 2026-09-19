@@ -32,8 +32,8 @@ function normalizeCollection(payload, collectionKey) {
   return [];
 }
 
-export async function fetchCollection(collectionKey) {
-  const response = await fetch(`${apiBaseUrl}/${collectionKey}/`);
+export async function fetchCollection(collectionKey, endpointPath = `/api/${collectionKey}/`) {
+  const response = await fetch(`${apiBaseUrl}${endpointPath.replace('/api', '')}`);
 
   if (!response.ok) {
     throw new Error(`Unable to load ${collectionKey}: ${response.status}`);

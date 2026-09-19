@@ -4,6 +4,7 @@ function Activities() {
   return (
     <ResourceList
       collection="activities"
+      endpoint="/api/activities/"
       title="Activities"
       subtitle="Recent logged workouts from OctoFit members."
       renderItem={(activity) => (

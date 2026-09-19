@@ -4,6 +4,7 @@ function Workouts() {
   return (
     <ResourceList
       collection="workouts"
+      endpoint="/api/workouts/"
       title="Workouts"
       subtitle="Suggested sessions matched to common training goals."
       renderItem={(workout) => (
